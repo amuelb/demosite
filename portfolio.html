@@ -1,0 +1,115 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>a.b.design | Portfolio</title>
+<link href="css/general.css" rel="stylesheet">
+<link href="css/menu.css" rel="stylesheet">
+</head>
+
+<body>
+<!-- Logo Header/Side Nav -->
+		<div class="left">
+		<header>
+			<div class="arrow_box"><a href="#"><img src="img/logo-02.png"></a></div>
+			<div class="arrow_box_shadow"></div>
+			<div class="side_nav_box">
+			<ul class="side_nav">
+				<li><a href="#">Home</a></li>
+				<li><a href="index.html">About</a></li>
+				<li><a href="portfolio.html">Portfolio</a></li>
+				<li><a href="#">Contact</a></li>
+			</ul>
+		</div>
+		</header>
+		</div>
+		
+		<!-- /Logo Header/Side Nav -->
+		
+		<!-- Clickable Nav -->
+		<div class="click-nav">
+			<ul class="no-js">
+				<li>
+					<a class="clicker">Menu</a>
+					<ul>
+						<li><a href="#">Home</a></li>
+						<li><a href="index.html">About</a></li>
+						<li><a href="portfolio.html">Portfolio</a></li>
+						<li><a href="#">Contact</a></li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+		<!-- /Clickable Nav -->
+		
+		<!-- Regualr Nav -->
+		<div class="reg_nav">
+			<ul>
+				<li><a href="#">Home</a></li>
+				<li><a href="index.html">About</a></li>
+				<li><a href="portfolio.html">Portfolio</a></li>
+				<li><a href="#">Contact</a></li>
+			</ul>
+		</div>
+		
+				<div class="right">
+		<div class="content">
+			<h1>My Portfolio</h1>
+			<h2>What can I offer you and your business?</h2>
+			<p>Welcome to my portoflio. Below is a collection of works that I have organized for you to look through. Each project reflects different skills that I have acquired over the years such as print media, digital media, and photography.</p>
+			
+			<div class="redesign">
+				<figure><img src="img/logo-redesign-01.jpg"></figure>
+				<figcaption><a href="#">Alpine Club | Logo Redesign</a></figcaption>
+			</div>
+			<div class="webdesign">
+			<figure><img src="img/webdesign-01.jpg"></figure>
+			<figcaption><a href="#">2 Litres of Light | Web Design</a></figcaption>
+			</div>
+			<div class="package">
+			<figure><img src="img/starbucks-01.jpg"></figure>
+			<figcaption><a href="#">Starbucks | Package Design</a></figcaption>
+			</div>
+			<div class="busad">
+			<figure><img src="img/busad-01.jpg"></figure>
+			<figcaption><a href="#">Izze | Ad Campaign</a></figcaption>
+			</div>
+			
+			
+		</div>
+		</div>
+		
+		
+		<!-- Footer -->
+		<footer>
+		<a href="https://www.facebook.com/amuelb"><img class="footer_img" src="img/icon-02.png" alt="facebook"></a>
+		<a href="https://www.linkedin.com/amuelb"><img class="footer_img" src="img/icon-03.png" alt="linkedin"></a>
+		<a href="https://vimeo.com/amuelb"><img class="footer_img" src="img/icon-04.png" alt="vimeo"></a>
+		<a href="https://www.twitter.com/amuelb"><img class="footer_img" src="img/icon-05.png" alt="twitter"></a>
+		<a href="https://www.behance.net/amuelb"><img class="footer_img" src="img/icon-01.png" alt="behance"></a>
+		</footer>
+		<!-- /Footer -->
+		
+		<!-- jQuery -->
+		<script src="js/menu.js"></script>
+		<script>
+		$(function() {
+			// Clickable Dropdown
+			$('.click-nav > ul').toggleClass('no-js js');
+			$('.click-nav .js ul').hide();
+			$('.click-nav .js').click(function(e) {
+				$('.click-nav .js ul').slideToggle(200);
+				$('.clicker').toggleClass('active');
+				e.stopPropagation();
+			});
+			$(document).click(function() {
+				if ($('.click-nav .js ul').is(':visible')) {
+					$('.click-nav .js ul', this).slideUp();
+					$('.clicker').removeClass('active');
+				}
+			});
+		});
+		</script>
+	
+</body>
+</html>

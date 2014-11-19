@@ -1,0 +1,100 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>a.b.design | About</title>
+<link href="css/general.css" rel="stylesheet">
+<link href="css/menu.css" rel="stylesheet">
+</head>
+
+<body>
+<!-- Logo Header/Side Nav -->
+		<div class="left">
+		<header>
+			<div class="arrow_box"><a href="#"><img src="img/logo-02.png"></a></div>
+			<div class="arrow_box_shadow"></div>
+			<div class="side_nav_box">
+			<ul class="side_nav">
+				<li><a href="#">Home</a></li>
+				<li><a href="index.html">About</a></li>
+				<li><a href="portfolio.html">Portfolio</a></li>
+				<li><a href="#">Contact</a></li>
+			</ul>
+		</div>
+		</header>
+		</div>
+		
+		<!-- /Logo Header/Side Nav -->
+		
+		<!-- Clickable Nav -->
+		<div class="click-nav">
+			<ul class="no-js">
+				<li>
+					<a class="clicker">Menu</a>
+					<ul>
+						<li><a href="#">Home</a></li>
+						<li><a href="index.html">About</a></li>
+						<li><a href="portfolio.html">Portfolio</a></li>
+						<li><a href="#">Contact</a></li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+		<!-- /Clickable Nav -->
+		
+		<!-- Regualr Nav -->
+		<div class="reg_nav">
+			<ul>
+				<li><a href="#">Home</a></li>
+				<li><a href="index.html">About</a></li>
+				<li><a href="portfolio.html">Portfolio</a></li>
+				<li><a href="#">Contact</a></li>
+			</ul>
+		</div>
+		
+				<div class="right">
+		<div class="content">
+			<img class="head_img" src="img/head.png">
+			<img class="body_img" src="img/body_copy.png">
+			<h1>AMY BROWN</h1>
+			<h2>Graphic Designer, 19</h2>
+			<p>I have been passionate about art for as long as I can remember... I used to sit around for hours and do little crafty things like model cars, drawings, cards, oragami, photography, and little bead creatures. I lived and breathed art.</p>
+			<p>Going through shcool, it was obvious where my dreams were headed since I did everything I could to take any art based program that was offered. I graduated with around 12 art credits and seven media/visual art based awards.</p>
+			<p>Currently, I study the graphic arts full time and work in a high-end wedding photography studio down in the Glebe. After I finish here, I plan to move to Toroto and persue a fulltime career as a designer. </p>
+		</div>
+		</div>
+	
+		
+		<!-- Footer -->
+		<footer>
+		<a href="https://www.facebook.com/amuelb"><img class="footer_img" src="img/icon-02.png" alt="facebook"></a>
+		<a href="https://www.linkedin.com/amuelb"><img class="footer_img" src="img/icon-03.png" alt="linkedin"></a>
+		<a href="https://vimeo.com/amuelb"><img class="footer_img" src="img/icon-04.png" alt="vimeo"></a>
+		<a href="https://www.twitter.com/amuelb"><img class="footer_img" src="img/icon-05.png" alt="twitter"></a>
+		<a href="https://www.behance.net/amuelb"><img class="footer_img" src="img/icon-01.png" alt="behance"></a>
+		</footer>
+		<!-- /Footer -->
+		
+		<!-- jQuery -->
+		<script src="js/menu.js"></script>
+		<script>
+		$(function() {
+			// Clickable Dropdown
+			$('.click-nav > ul').toggleClass('no-js js');
+			$('.click-nav .js ul').hide();
+			$('.click-nav .js').click(function(e) {
+				$('.click-nav .js ul').slideToggle(200);
+				$('.clicker').toggleClass('active');
+				e.stopPropagation();
+			});
+			$(document).click(function() {
+				if ($('.click-nav .js ul').is(':visible')) {
+					$('.click-nav .js ul', this).slideUp();
+					$('.clicker').removeClass('active');
+				}
+			});
+		});
+		</script>
+	
+</body>
+</html>
